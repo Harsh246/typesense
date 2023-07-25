@@ -5,7 +5,7 @@
 Option<bool> VectorQueryOps::parse_vector_query_str(std::string vector_query_str, vector_query_t& vector_query,
                                             const Collection* coll) {
     // FORMAT:
-    // field_name([0.34, 0.66, 0.12, 0.68], exact: false, k: 10)
+    // field_name:([0.34, 0.66, 0.12, 0.68], exact: false, k: 10)
     size_t i = 0;
     while(i < vector_query_str.size()) {
         if(vector_query_str[i] != ':') {
